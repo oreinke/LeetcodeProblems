@@ -16,7 +16,6 @@ class Solution {
         {
             int heightAtI = (Math.min(maxLeft[i], maxRight[i]) - height[i]) > 0 ? Math.min(maxLeft[i], maxRight[i]) - height[i] : 0;
             total += heightAtI;
-            System.out.println("water height at " + i + " is " + heightAtI);
         }
 
         
