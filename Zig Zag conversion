@@ -1,0 +1,45 @@
+https://leetcode.com/problems/zigzag-conversion/description/?envType=study-plan-v2&envId=top-interview-150
+
+class Solution {
+    public String convert(String s, int numRows) {
+        String newStr = "";
+        int curIndex = 0;
+
+        if (numRows == 1)
+            return s;
+
+        while (curIndex < s.length())
+        {
+            newStr += s.charAt(curIndex);
+            curIndex += numRows * 2 - 2;
+        }
+
+        for (int i = 1; i < numRows - 1; i++)
+        {
+            curIndex = i;
+
+            while (curIndex < s.length())
+            {
+                newStr += s.charAt(curIndex);
+                if (curIndex + ((numRows - i) * 2) - 2 < s.length())
+                {
+                    newStr += s.charAt(curIndex + ((numRows - i) * 2) - 2);
+                }
+                curIndex += numRows * 2 - 2;
+            }
+
+        }
+
+        if (numRows > 1)
+        {
+            curIndex = numRows - 1;
+            while (curIndex < s.length())
+            {
+                newStr += s.charAt(curIndex);
+                curIndex += numRows * 2 - 2;
+            }
+        }
+
+        return newStr;
+    }
+}
