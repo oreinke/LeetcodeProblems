@@ -1,17 +1,11 @@
-typedef unsigned long long ull;
 
 class Solution {
 public:
     
-    ull factorial (int n, map<ull, ull> &fact) {
-        if (fact.find(n) != fact.end()) return fact[n];
-        else return factorial(n - 1, fact) * n;
-    }
+
 
     int tupleSameProduct(vector<int>& nums) {
-        map<ull, ull> fact;
-        fact[1] = 1;
-        fact[0] = 1;
+
         map<int, int> products;
         for (int i = 0; i < nums.size(); ++i) {
             for (int j = i + 1; j < nums.size(); ++j) {
