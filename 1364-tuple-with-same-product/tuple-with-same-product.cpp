@@ -22,9 +22,9 @@ public:
         long long cnt = 0;
         for (auto [x, y] : products) {
             if (y > 1) {
-                cnt += (factorial(y, fact) / (2 * factorial(y - 2, fact))) * 8;
+                cnt += y * (y - 1) / 2;
             }
         }
-        return cnt;
+        return cnt * 8;
     }
 };
