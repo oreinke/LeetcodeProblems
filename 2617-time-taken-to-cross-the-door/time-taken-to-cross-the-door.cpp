@@ -9,7 +9,7 @@ public:
         int i = 0;
         while (i < n) {
             if (arrival[i] > time) {
-                 e = true;
+                e = true;
                 time = arrival[i];
             }
 
@@ -25,8 +25,7 @@ public:
             }
 
             while (!exit.empty() || !enter.empty()) {
-                printf("i: %d, time: %d\n", i, time);
-                fflush(stdout);
+                
                 while (i < n && arrival[i] <= time) {
                     
                     if (1 == state[i]) {
