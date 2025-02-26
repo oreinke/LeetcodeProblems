@@ -9,7 +9,7 @@
 class Solution {
 public:
     int numberOfCategories(int n, CategoryHandler* categoryHandler) {
-        set<int> cats;
+        unordered_set<int> cats;
         for (int i = 0; i < n; ++i) {
             bool valid = true;
             for (int cat : cats) {
