@@ -1,6 +1,6 @@
 class LRUCache {
 public:
-    map<int, int> val, cnt;
+    unordered_map<int, int> val, cnt;
     int cap;
     int cur = 0;
     deque<int> q;
