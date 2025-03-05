@@ -1,7 +1,7 @@
 class Solution {
 public:
     int leastInterval(vector<char>& tasks, int n) {
-        map<int, int> cnt;
+        unordered_map<int, int> cnt;
         for (char c : tasks)  cnt[c - 'a']++;
         int maxCnt = 0;
         for (auto [x, y] : cnt) maxCnt = max(maxCnt, y);
