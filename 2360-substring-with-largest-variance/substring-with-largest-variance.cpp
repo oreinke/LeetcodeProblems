@@ -18,7 +18,7 @@ public:
                         lowC = 1;
                         if (big - low > best) {
                             best = big - low;
-                            printf("updated best: %d, big: %d, low: %d, i: %d, j: %d\n", best, big, low, i, j);
+                            // printf("updated best: %d, big: %d, low: %d, i: %d, j: %d\n", best, big, low, i, j);
                             
                         }
 
@@ -60,7 +60,7 @@ public:
                 }
                 if (big - low > best) {
                     best = big - low;
-                    printf("updated best: %d, big: %d, low: %d, i: %d, j: %d\n", best, big, low, i, j);
+                    // printf("updated best: %d, big: %d, low: %d, i: %d, j: %d\n", best, big, low, i, j);
                     
                 }
             }
